@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dupe4Lifes - About Us</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            max-width: 80%;
+            overflow-y: auto;
+            max-height: 80vh;
+            position: relative;
+        }
+
+        h1 {
+            color: white;
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #f0f0f0;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: white;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        /* Hamburger Menu Styles */
+        .menu-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+            z-index: 1000;
+            opacity: 0.9;
+        }
+
+        .hamburger {
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+            margin: 5px 0;
+            transition: transform 0.3s, opacity 0.3s;
+            position: relative;
+        }
+
+        .hamburger:before, .hamburger:after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+            transition: transform 0.3s, opacity 0.3s;
+        }
+
+        .hamburger:before {
+            top: -8px;
+        }
+
+        .hamburger:after {
+            bottom: -8px;
+        }
+
+        .menu {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            max-width: 200px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease-in-out;
+            z-index: 999;
+        }
+
+        .menu ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu li {
+            margin-bottom: 10px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+
+        .menu a:hover {
+            color: #ccc;
+        }
+
+        .menu.open {
+            opacity: 1;
+            pointer-events: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div class="hamburger"></div>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="https://www.dupe4lifes.org" target="_blank">Home</a></li>
+                <li><a href="https://discord.gg/x4SEj3dGk3" target="_blank">Join Discord</a></li>
+                <li><a href="https://www.dupe4lifes.org/RanksStore" target="_blank">Ranks Store</a></li>
+                <li><a href="https://www.dupe4lifes.org/about" target="_blank">About Us</a></li>
+            </ul>
+        </div>
+        <h1>About Dupe4Lifes</h1>
+        <h2>Our Story</h2>
+        <p>Dupe4Lifes is the #1 Lifesteal Dupe Server where players can engage in thrilling gameplay. Our community is dedicated to providing the best experience for all players.</p>
+        <p>Founded in [Year], Dupe4Lifes has grown to become a popular server thanks to our dedicated community and staff. Join us and be part of an exciting journey!</p>
+        <p>Connect with us on Discord and check out our Ranks Store for exclusive benefits and enhancements to your gameplay.</p>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            menu.classList.toggle('open');
+            
+            const toggleIcon = document.querySelector('.hamburger');
+            toggleIcon.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>
